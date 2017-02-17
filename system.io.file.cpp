@@ -56,9 +56,9 @@ void File::Copy(string sourceFileName, string destFileName, bool overwrite)
 vector<unsigned char> File::ReadAllBytes(string path)
 {
 	vector<unsigned char> ret;
-	if (!File::Exists) return ret;
-
 	FILE *fp = fopen(path.c_str(), "rb");
+	if (!fp) return ret;
+
 	fseek(fp, 0, SEEK_END);
 	int len = ftell(fp);
 	fseek(fp, 0, SEEK_SET);
@@ -80,6 +80,8 @@ string File::ReadAllText(string pathname)
 {
 	std::string ret = "";
 	FILE *fp = fopen(pathname.c_str(), "rb");
+	if (!fp) return ret;
+
 	fseek(fp, 0, SEEK_END);
 	int length = ftell(fp);
 	fseek(fp, 0, SEEK_SET);

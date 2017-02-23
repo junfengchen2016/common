@@ -103,7 +103,7 @@ namespace chenjunfeng
 			return true;
 		}
 
-		vector<unsigned char> Convert::FromBase64String(string s)
+		vector<unsigned char> Convert::FromBase64String(string& s)
 		{
 			vector<unsigned char> ret;
 

@@ -27,7 +27,7 @@ namespace chenjunfeng
 			//
 			//   T:System.FormatException:
 			//     s 的长度（忽略空白字符）不是 0 或 4 的倍数。- 或 -s 的格式无效。s 包含一个非 base 64 字符、两个以上的填充字符或者在填充字符中包含非空白字符。
-			static vector<unsigned char> FromBase64String(string s);
+			static vector<unsigned char> FromBase64String(string& s);
 			//
 			// 摘要:
 			//     将 8 位无符号整数的数组转换为其用 Base64 数字编码的等效字符串表示形式。

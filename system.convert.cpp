@@ -114,6 +114,9 @@ namespace chenjunfeng
 
 			if (!checkbase64(s)) return ret;
 
+			int to_length = (s.length() + 3) / 4 * 3;
+			ret.reserve(to_length);
+
 			for (size_t i = 0; i != len; i += 4) {
 				ptr = buffer + i;
 

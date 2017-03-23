@@ -17,6 +17,8 @@ namespace chenjunfeng
 
 				fs::path _path(path);
 
+				if(!fs::exists(path)) return ret;
+
 				if (searchOption == SearchOption::SearchOption_AllDirectories)
 				{
 					fs::recursive_directory_iterator end_iter;

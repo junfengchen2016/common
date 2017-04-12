@@ -42,15 +42,14 @@ void File::Copy(string sourceFileName, string destFileName, bool overwrite)
 
 	while (count != 0)
 	{
-		fread(buf.data(), 0, count, fp_src);
-		fwrite(buf.data(), 0, count, fp_dst);
+		fread(buf.data(), 1, count, fp_src);
+		fwrite(buf.data(), 1, count, fp_dst);
 		length -= count;
 		count = min(32768, length);
 	}
 
 	fclose(fp_src);
 	fclose(fp_dst);
-
 }
 
 vector<unsigned char> File::ReadAllBytes(string path)

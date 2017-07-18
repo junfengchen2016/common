@@ -7,7 +7,7 @@ namespace chenjunfeng
 		namespace Text
 		{
 
-#ifdef WIN32
+//#ifdef WIN32
  	          
 			//namespace Encoding
 			//{
@@ -43,7 +43,7 @@ string Encoding::GetBytes(wstring s)
 }
 
 			//}
-#endif
+//#endif
 
 		}
 	}

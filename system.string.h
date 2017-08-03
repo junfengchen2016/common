@@ -16,6 +16,8 @@ namespace chenjunfeng
 		{
 		public:
 			static vector<string> Split(string& str, vector<char>& separator, StringSplitOptions options = StringSplitOptions_None);
+			static std::string format(const char *fmt, ...);
+			static std::wstring format(const wchar_t *fmt, ...);
 		};
 	}
 }

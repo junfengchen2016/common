@@ -75,6 +75,14 @@ void File::WriteAllBytes(string path, vector<unsigned char>& bytes)
 	fclose(fp);
 }
 
+void File::WriteAllBytes(string path, void* data, int size)
+{
+	FILE *fp = fopen(path.c_str(), "wb");
+	fwrite(data, 1, size, fp);
+	fclose(fp);
+}
+
+
 string File::ReadAllText(string pathname)
 {
 	std::string ret = "";

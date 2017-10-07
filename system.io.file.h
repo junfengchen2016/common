@@ -20,6 +20,7 @@ public:
 	static vector<unsigned char> ReadAllBytes(string path);
 	static string ReadAllText(string path);
 	static void WriteAllBytes(string path, vector<unsigned char>& bytes);
+	static void WriteAllBytes(string path, void* data, int size);
 	static void WriteAllText(string path, string contents);
 };
 
